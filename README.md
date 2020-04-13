@@ -29,7 +29,7 @@ Complete example:
 ```html
 <h1
     class="lighty-slide"
-    data-landjs="
+    data-lighty_slide="
         slide:100px;
         direction:bottom;
         duration:0.5s;
