@@ -1,50 +1,46 @@
 # lighty-slide.js
 
-`lighty-slide.js` is a plain JavaScript library allowing its user to easily add slide animations to DOM elements
-from the HTML `data` attribute.
+`lighty-slide.js` is a JavaScript library to quickly add sliding transitions by simply adding  `data-lighty-slide` HTML attribute to an element.
 
-> Warning: all the comments in the source code are written in French, as I wrote this code a long time ago, not thinking
-> it could be used by people throughout the world.
+## Simple example
 
-## Usage
-
-It is very simple. Simply include `lighty-slide.js` or `lighty-slide.min.js` and add `lighty-slide` class
-to the DOM element.
+1. Include `lighty-slide.js` or `lighty-slide.min.js`.
+2. Add the `data-lighty-slide` data attribute to your elements.
 
 ```html
-<h1 class="lighty-slide">Header slidin'</h1>
+<h1 data-lighty-slide>Slidin' header</h1>
 ```
 
-Then, add parameters through the DOM element with `data-lighty_slide` data attribute.
+## Complete example
+
+```html
+<h1 data-lighty-slide="
+    slide: 100px;
+    direction: bottom;
+    duration: 500;
+    opacity: 0.5;
+    timeout: 1000">
+Slidin' header</h1>
+```
+
+Other examples shown in `demo/index.html`.
+
+## Options
 
 ```text
-slide     - The slide's length.
-direction - The slide's direction (top, right, left, bottom).
-duration  - The slide's duration in seconds.
-opacity   - The slide's opacity at the start of the animation (range: [0-1]).
+slide     {string} The slide's distance                     (ex: "20px", "5%")
+direction {string} The slide's direction                    (ex: "top", "right", "left", "bottom")
+duration  {number} The slide's duration in milliseconds     (ex: 200, 1000)
+opacity   {number} Opacity at the start of the slide        (range [0-1]).
+timeout   {number} Timeout in milliseconds before the slide (ex: 200, 1000)
 ```
-
-Complete example:
-
-```html
-<h1
-    class="lighty-slide"
-    data-lighty_slide="
-        slide:100px;
-        direction:bottom;
-        duration:0.5s;
-        opacity:0">
-Header slidin'</h1>
-```
-
-Examples of usage shown in `demo/index.html`.
 
 ## License
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/) - see the LICENSE.md file for details.
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/) - see the `LICENSE.md` file for details.
 
 ## Author
 
 Alexis Philip ([Website](https://alexisphilip.fr),
-[GitHub](https://github.com/alexis-philip),
-[LinkedIn](https://www.linkedin.com/in/alexis-philip-019955176)). 
+[GitHub](https://github.com/alexisphilip),
+[LinkedIn](https://www.linkedin.com/in/alexis-philip-019955176)).
